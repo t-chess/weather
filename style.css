@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    padding: 50px;
+    max-width: 1800px;
+    margin: 0 auto;
+    background-color: #0F1424;
+    color: white;
+}
+button {
+    cursor: pointer;
+}
+
+button, input {
+    border: none;
+    background: none;
+    outline: none;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+ul {
+    list-style: none;
+}
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 28px;
+    padding: 0 0 15px 0;
+}
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.top p {
+    font-size: 16px;
+    color: #E49C9E;
+    padding-bottom: 10px;
+}
+.top form {
+    position: relative;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+}
+input {
+    height: 45px;
+    width: 200px;
+    padding: 5px;
+    color: white;
+}
+input:focus {
+    background-color: #53395C;
+}
+::placeholder {
+    color: white;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+.top form button {
+    font-size: 16px;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    padding: 10px 15px;
+    margin-left: 15px;
+    border-radius: 5px;
+    background-image: linear-gradient( 109.6deg, #973D4E 11.2%, #53395C 92.5% );
+    border: 1px solid #53395C;
+}
+.top form button:hover {
+    border: 1px solid white;
+    text-decoration: underline;
+}
+#msg {
+    position: absolute;
+    font-size: 14px;
+    bottom: -50px;
+    left: 0;
+    max-width: 500px;
+    min-height: 50px;
+}
+main {
+    margin: 50px 35px 20px;
+}
+.list {
+    display: grid;
+    grid-gap: 30px 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.city {
+    position: relative;
+    padding: 40px 10%;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, #22c1c3, #fdbb2d);
+    border: 2px solid white;
+}
+
+.caption {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.temp {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: white;
+}
+.city span {
+    font-size: 28px;
+}
+.city sup {
+    font-size: 14px;
+}
+
+.playpauseBtn {
+    display: block;
+    float: right;
+}
+.city i {
+    font-size: 56px;
+}
+.remove {
+    font-size: 12px;
+    color: white;
+    text-decoration: underline;
+    position: absolute;
+    bottom: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .top form {
+        flex-direction: column;
+    }
+    .top form input, .top form button {
+        width: 100%;
+    }
+    .top form button {
+        margin: 20px 0 0 0;
+    }
+    #msg {
+        position: static;
+        max-width: none;
+        min-height: 0;
+        margin-top: 15px;
+    }
+    main .list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 500px) {
+    main .list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    main {
+        margin: 20px 10px;
+    }
+    body {
+        padding: 30px;
+    }
+}
